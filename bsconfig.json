@@ -12,13 +12,14 @@
   "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
   "package-specs": [
     {
-      "module": "commonjs",
+      "module": "es6",
       "in-source": true
     }
   ],
   "suffix": ".bs.js",
   "ppx-flags": ["rescript-relay/ppx"],
   "namespace": false,
+  "pinned-dependencies": [],
   "bs-dependencies": ["@rescript/react", "rescript-relay"],
   "refmt": 3
 }

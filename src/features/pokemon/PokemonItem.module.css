@@ -1,0 +1,11 @@
+.wrapper {
+  padding: 10px;
+}
+
+.wrapper img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}

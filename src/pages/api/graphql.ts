@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(
-  _req: NextApiRequest,
+  req: NextApiRequest,
   res: NextApiResponse
 ) {
   const response = await fetch(`https://graphqlpokemon.favware.tech/v7`, {
@@ -10,6 +10,7 @@ export default async function handler(
     headers: {
       "Content-Type": "application/json",
     },
+    body: JSON.stringify(req.body),
   });
   res.status(response.status);
   res.send(await response.json());
