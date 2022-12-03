@@ -1,0 +1,24 @@
+{
+  "name": "rescript-relay-next-ssr-template",
+  "reason": {
+    "react-jsx": 3
+  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "ppx-flags": ["rescript-relay/ppx"],
+  "namespace": false,
+  "bs-dependencies": ["@rescript/react", "rescript-relay"],
+  "refmt": 3
+}
