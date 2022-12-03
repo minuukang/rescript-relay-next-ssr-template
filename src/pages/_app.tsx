@@ -16,10 +16,14 @@ function App({ Component, pageProps, router }: AppProps) {
   const relayStoreRef = useRef<Record<string, PageProps["__relayStore__"]>>({});
   useMemo(() => {
     const key = (router as unknown as { _key: string })._key;
+    // NOTE: This flag expected that the store will not be reapplied in the same history
+    // example) pagination of infinite loading connection
     if (!relayStoreRef.current[key]) {
       relayStoreRef.current[key] = __relayStore__;
       if (__relayStore__) {
         const recordStore = new RecordSource(__relayStore__);
+        // NOTE: Bug of relay-runtime merging client connection and server connection
+        // so, i will delete connection edges by updating from recordStore
         commitLocalUpdate(environment, (store) => {
           recordStore.getRecordIDs().forEach((dataID) => {
             store
