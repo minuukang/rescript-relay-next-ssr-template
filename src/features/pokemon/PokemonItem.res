@@ -1,11 +1,7 @@
 module Fragment = %relay(`
   fragment PokemonItem_Fragment on Pokemon {
-    key
-    sprite
-    num
-    species
-    forme
-    baseSpecies
+    id
+    name
   }
 `)
 
@@ -15,14 +11,10 @@ external styles: {..} = "default"
 @react.component
 let make = (~fragmentRefs) => {
   let pokemon = Fragment.use(fragmentRefs)
-  <Next.Link href={`/pokemon/${pokemon.key->Fragment.pokemonEnum_toString}`}>
+  <Next.Link href={`/pokemon/${pokemon.id}`}>
     <figure className={styles["wrapper"]}>
-      <img src={pokemon.sprite} alt="" />
-      <figcaption>
-        {`No.${pokemon.num->Belt.Int.toString}: ${pokemon.baseSpecies->Belt.Option.getWithDefault(
-            pokemon.species,
-          )}${pokemon.forme->Belt.Option.mapWithDefault("", forme => ` (${forme})`)}`->React.string}
-      </figcaption>
+      <img src={PokemonUtils.makeSpriteImage(pokemon.name)} alt="" />
+      <figcaption> {`No.${pokemon.id}: ${pokemon.name}`->React.string} </figcaption>
     </figure>
   </Next.Link>
 }

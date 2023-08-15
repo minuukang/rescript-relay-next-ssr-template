@@ -9,7 +9,6 @@ import {
 } from "react-relay-network-modern/es";
 
 export const makeEnvironment = () => {
-  console.log(`${process.env.NEXT_PUBLIC_API_URL}/graphql`);
   return new Environment({
     store: new Store(new RecordSource(), {
       gcReleaseBufferSize: 10,

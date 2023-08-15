@@ -79,10 +79,10 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.0.6.tgz#dfa28ddb335c16233d22cf39ec8cdf723e6587a1"
   integrity sha512-pSkqZ//UP/f2sS9T7IvHLfEWDPTX0vRyXJnAUNisKvO3eF3e1xdhDX7dix/X3Z3lnN4UjSwOzclAI87JFbOwmQ==
 
-"@rescript/react@^0.10.3":
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/@rescript/react/-/react-0.10.3.tgz#a2a8bed6b017940ec26c2154764b350f50348889"
-  integrity sha512-Lf9rzrR3bQPKJjOK3PBRa/B3xrJ7CqQ1HYr9VHPVxJidarIJJFZBhj0Dg1uZURX+Wg/xiP0PHFxXmdj2bK8Vxw==
+"@rescript/react@0.12.0-alpha.3":
+  version "0.12.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@rescript/react/-/react-0.12.0-alpha.3.tgz#45b94e5b1f24776e74c2dfb7da38ed2c02a4651d"
+  integrity sha512-/S1uj77RPDzuLg3Ofb8KKU3Vppqy97/vF6bBdBZ+saIO9bpHVlsmmJyJG8QXjGZKE+aMynrrR3Tj4+9+5OzLdw==
 
 "@swc/helpers@0.4.14":
   version "0.4.14"
@@ -394,16 +394,16 @@ react-relay-network-modern@^6.2.1:
     core-js "^3.0.0"
     extract-files "^9.0.0"
 
-react-relay@^14.1.0:
-  version "14.1.0"
-  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-14.1.0.tgz#2a2349d33ca6558543340a12b363ee2de3db06a6"
-  integrity sha512-U4oHb5wn1LEi17x3AcZOy66MXs83tnYbsK7/YE1/3cQKCPrXhyVUQbEOC9L7jMX659jtS1NACae+7b03bryMCQ==
+react-relay@^15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-15.0.0.tgz#0014bea71611ae5cdbd3ef445aa13398fe3372d1"
+  integrity sha512-KWdeMMKMJanOL9LsGZYkyAekayYIi+Y4mbDM8VYbHVPgTWJWAQP6yJKS+V4D17qIMo1L84QJQjGaQWEG139p9Q==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.2"
     invariant "^2.2.4"
     nullthrows "^1.1.1"
-    relay-runtime "14.1.0"
+    relay-runtime "15.0.0"
 
 react@18.2.0:
   version "18.2.0"
@@ -417,10 +417,10 @@ regenerator-runtime@^0.13.11:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
 
-relay-runtime@14.1.0, relay-runtime@^14.1.0:
-  version "14.1.0"
-  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-14.1.0.tgz#44b317101f560a16caea2eef8a52e254b03908fa"
-  integrity sha512-t2DR2hZviHrdEQrOvFqwmvRWvZ0SjI/r4bS5f3qvMyXt4g1kw3RTb2RNVmbKGg6zEQhf7Na/brdqE4roApmclQ==
+relay-runtime@15.0.0, relay-runtime@^15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-15.0.0.tgz#e83315ea23925fae8f3317f0091f28924441576f"
+  integrity sha512-7AXkXLQo6gpJNBhk4Kii5b+Yat62HSDD1TgJBi021iSjT1muI8iYd4UZG4f/If209LmaVjkZt2HTNAlk6xtslw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fbjs "^3.0.2"
@@ -431,17 +431,17 @@ require-directory@^2.1.1:
   resolved "https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz#8c64ad5fd30dab1c976e2344ffe7f792a6a6df42"
   integrity sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==
 
-rescript-relay@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/rescript-relay/-/rescript-relay-1.0.4.tgz#d7afd3603fce1b3a33f3ae3d2bedba4b2a4ac59b"
-  integrity sha512-/LIAMpbOc7gIXkTdj4vcOjhknSsoG+FoEJQDR6286cAXeIRBeRDaZPlyCbuy1/L65XltCTfeYPiEJef9FHa0uA==
+rescript-relay@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/rescript-relay/-/rescript-relay-2.0.2.tgz#2ac666ca06c56bd40898fec8d3583709cc689045"
+  integrity sha512-pFZyiwcY+nfGbgKlU0XnUbllDss4STMhgRUEXAd/1xg5snCSGG/rTrojLDdyzLsTIppEbF22+n9VgcXWiTJXzg==
   dependencies:
     detect-libc "^2.0.1"
 
-rescript@10.1.0-rc.5:
-  version "10.1.0-rc.5"
-  resolved "https://registry.yarnpkg.com/rescript/-/rescript-10.1.0-rc.5.tgz#d2eed3ae882e1a4def76d145f30957b3f7c33747"
-  integrity sha512-57/4oETx9s0uiCof1Yfo/SU3kyDE/AHf2RjMpIpdXeYhaa62C0f15cbLCAHehJEy/L6kJUHoQBzNqQ0OuumcSQ==
+rescript@11.0.0-beta.4:
+  version "11.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/rescript/-/rescript-11.0.0-beta.4.tgz#07433d6d0d7118bec73954241d7a61a32c6e1dbf"
+  integrity sha512-MqTyh9LhDmA++2nemZF+amEO3kOg6a5tR43DuLVocILOAvR17UZcVcS6czGaW6+zOxvPOXVv2i/xiiWCJIDmvw==
 
 rxjs@^7.0.0:
   version "7.5.7"

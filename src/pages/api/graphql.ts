@@ -5,13 +5,22 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const response = await fetch(`https://graphqlpokemon.favware.tech/v7`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(req.body),
-  });
+  const response = await fetch(
+    `https://trygql.formidable.dev/graphql/basic-pokedex`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(req.body),
+    }
+  );
   res.status(response.status);
-  res.send(await response.json());
+  if (response.ok) {
+    const json = await response.json();
+    res.send(json);
+  } else {
+    console.error(await response.text());
+    res.send(await response.text());
+  }
 }

@@ -1,15 +1,14 @@
 {
   "name": "rescript-relay-next-ssr-template",
-  "reason": {
-    "react-jsx": 3
+  "uncurried": true,
+  "jsx": {
+    "version": 4,
+    "mode": "automatic"
   },
-  "sources": [
-    {
-      "dir": "src",
-      "subdirs": true
-    }
-  ],
-  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
   "package-specs": [
     {
       "module": "es6",
@@ -18,8 +17,9 @@
   ],
   "suffix": ".bs.js",
   "ppx-flags": ["rescript-relay/ppx"],
-  "namespace": false,
-  "pinned-dependencies": [],
-  "bs-dependencies": ["@rescript/react", "rescript-relay"],
-  "refmt": 3
+  "namespace": true,
+  "bs-dependencies": [
+    "@rescript/react",
+    "rescript-relay"
+  ]
 }

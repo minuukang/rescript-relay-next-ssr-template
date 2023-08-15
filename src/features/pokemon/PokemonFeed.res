@@ -1,7 +1,7 @@
 module Fragment = %relay(`
   fragment PokemonFeed_Fragment on Query {
-    getAllPokemon(offset: 87, take: 100) {
-      key
+    pokemons(limit: 1000) {
+      id
       ...PokemonItem_Fragment
     }
   }
@@ -12,13 +12,14 @@ external styles: {..} = "default"
 
 @react.component
 let make = (~fragmentRefs) => {
-  let {getAllPokemon} = Fragment.use(fragmentRefs)
+  let {pokemons} = Fragment.use(fragmentRefs)
   <div>
     <h1> {`Pokemons`->React.string} </h1>
     <ul className={styles["list"]}>
-      {getAllPokemon
+      {pokemons
+      ->Belt.Option.getWithDefault([])
       ->Belt.Array.map(pokemon =>
-        <li key={pokemon.key->Fragment.pokemonEnum_toString} className={styles["item"]}>
+        <li key={pokemon.id}>
           <PokemonItem fragmentRefs=pokemon.fragmentRefs />
         </li>
       )

@@ -71,8 +71,8 @@ module GetServerSideProps = {
       }->Obj.magic
     }
 
-  let make = (callback: t<'a, 'b>, context: context<'b>) => {
-    callback(context) |> Js.Promise.then_(result => result->parseResult->Js.Promise.resolve)
+  let make = async (callback: t<'a, 'b>, context: context<'b>) => {
+    (await callback(context))->parseResult
   }
 }
 
