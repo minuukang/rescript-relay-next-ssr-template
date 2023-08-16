@@ -36,8 +36,8 @@ type EvolutionRequirement {
 }
 
 type PokemonDimension {
-  minimum: String
-  maximum: String
+  minimum: String!
+  maximum: String!
 }
 
 type AttacksConnection {
@@ -53,8 +53,8 @@ type Pokemon {
   resistant: [PokemonType!]!
   weaknesses: [PokemonType!]!
   evolutionRequirements: [EvolutionRequirement]
-  weight: PokemonDimension
-  height: PokemonDimension
+  weight: PokemonDimension!
+  height: PokemonDimension!
   attacks: AttacksConnection
   fleeRate: Float
   # Likelihood of an attempt to catch a Pokémon to fail.
@@ -65,5 +65,5 @@ type Pokemon {
   maxHP: Int
   # Maximum health points a Pokémon may achieve at max level.
 
-  evolutions: [Pokemon]
+  evolutions: [Pokemon!]
 }
