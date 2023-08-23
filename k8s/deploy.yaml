@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: rescript-relay-next-ssr
+  name: rescript-relay-next-ssr
+spec:
+  selector:
+    matchLabels:
+      app: rescript-relay-next-ssr
+  template:
+    metadata:
+      labels:
+        app: rescript-relay-next-ssr
+    spec:
+      containers:
+        - name: app
+          image: docker.io/minukang/rescript-relay-next-ssr
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
